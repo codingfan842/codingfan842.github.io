@@ -1,8 +1,3 @@
 _site
 node_modules
 .cache
-assets
-_includes
-css
-js
-src
