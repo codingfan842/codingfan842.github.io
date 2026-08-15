@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> | About ✱ DorianVERSE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/achievements.css">
+    <link rel="stylesheet" href="/css/dorian.css">
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away-subtle.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/dist/border.css"/>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+    
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript">
+      message = " | About ✱ DorianVERSE ";
+      function step() {
+        message = message.substr(1) + message.substr(0, 1);
+        document.title = message.substr(0, 15);
+      }
+    </script>
+  </head>
+  <body class="" onload="setInterval(step,200)">
+    <div class="w-50  p-2 m0a" style="border-left:2px solid var(--dark);border-right:2px solid var(--dark)">
+      <h1 class="text-right">
+        About
+      </h1>
+      <nav class="bg-primary">
+        <ul class="text-light lst-none" >
+          <li>
+            <a class="text-light" href="/home/">home</a>
+            <a class="text-light" href="/about/">about</a>
+            <a class="text-light" href="/blog/">blog</a>
+            <a class="text-light" href="/projects/">projects</a>
+            <a class="text-light" href="/links/">links</a>
+
+          </li>
+        </ul>
+      </nav>
+      <p>Hiya, name's Dorian! Welcome to my website. I'm a freak from the middle of nowhere. This is my website I made with my own two grimy hands.</p>
+
+    </div>
+
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="/js/achievement.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        achieveCheck();
+        
+      });
+    </script>
+
+    <script src="/js/script.js"></script>
+    <script src="/js/drag.js"></script>
+    <script src="/js/ocText.js"></script>
+    <script src="/js/window.js"></script>
+    <script src="/js/music.js"></script>
+    <script src="/js/tippy.js"></script>
+    <script src="/js/hover.js"></script>
+    <script src="/js/name.js"></script>
+    
+
+  </body>
+</html>
