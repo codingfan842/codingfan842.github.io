@@ -5,7 +5,6 @@ module.exports = function (eleventyConfig) {
   return {
     // This makes sure HTML files use Nunjucks
     dir: {
-      input: "content",
       output: "public",
     },
   };

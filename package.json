@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx @11ty/eleventy",
-	"build-ghpages": "npx @11ty/eleventy"
+    "build": "eleventy"
   },
   "keywords": [],
   "author": "",
