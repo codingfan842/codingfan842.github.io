@@ -1,2 +1,0 @@
-﻿# DorianVERSE
-It's my personal website I work on sometimes. It's awesome.
