@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> | {{ title }} ✱ DorianVERSE</title>
+    <script src="https://u.widget.st/ar.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
@@ -70,6 +71,140 @@
     <script src="/js/tippy.js"></script>
     <script src="/js/hover.js"></script>
     <script src="/js/name.js"></script>
+<script>
+var _____WB$wombat$assign$function_____=function(name){return (globalThis._wb_wombat && globalThis._wb_wombat.local_init && globalThis._wb_wombat.local_init(name))||globalThis[name];};if(!globalThis.__WB_pmw){globalThis.__WB_pmw=function(obj){this.__WB_source=obj;return this;}}{
+let window = _____WB$wombat$assign$function_____("window");
+let self = _____WB$wombat$assign$function_____("self");
+let document = _____WB$wombat$assign$function_____("document");
+let location = _____WB$wombat$assign$function_____("location");
+let top = _____WB$wombat$assign$function_____("top");
+let parent = _____WB$wombat$assign$function_____("parent");
+let frames = _____WB$wombat$assign$function_____("frames");
+let opener = _____WB$wombat$assign$function_____("opener");
+(function () {
+    "use strict"
+    
+    const element = document.currentScript.parentElement
+    const settings = JSON.parse(decodeURIComponent(document.currentScript.dataset.settings))
+    const iid = element.getAttribute("iid")
+
+    const style = document.createElement("style")
+    style.textContent = `
+        .cursor-widget-cursor {
+            position: absolute;
+            top: 0; 
+            left: 0;
+            width: ${settings.cursor_width}px; 
+            height: ${settings.cursor_height}px;
+            pointer-events: none;
+            z-index: 99999999;
+            opacity: ${settings.cursor_opacity / 10};
+            transform: translate(-2px, -2px);
+            transition: left 0.05s linear, top 0.05s linear;
+        }
+    `
+    document.head.appendChild(style)
+
+    const CURSOR_SVG = `
+        <svg width="${settings.cursor_width}" height="${settings.cursor_height}" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 1 L2 17 L6.5 13.5 L9 19 L11.5 18 L9 12.5 L15 12.5 Z"
+                  fill="${settings.cursor_fill}" stroke="${settings.cursor_outline}" stroke-width="1.2" stroke-linejoin="round"/>
+        </svg>
+    `
+
+    const ws = new WebSocket(`wss://menal.xyz/widgets/cursors/ws?iid=${encodeURIComponent(iid)}`)
+    ws.binaryType = "arraybuffer"
+
+    const cursors = new Map()
+
+    function getCursorEl(id) {
+        let curr = cursors.get(id)
+        if (!curr) {
+            curr = document.createElement("div")
+            curr.className = "cursor-widget-cursor"
+            curr.innerHTML = CURSOR_SVG
+            document.body.appendChild(curr)
+            cursors.set(id, curr)
+        }
+        return curr
+    }
+
+    ws.addEventListener("message", (event) => {
+        const view = new DataView(event.data)
+        if (view.byteLength != 6) return
+
+        const id = view.getUint16(0, true)
+        let x, y
+        if (settings.relative) {
+            x = (view.getUint16(2, true) / 65535) * document.documentElement.scrollWidth
+            y = (view.getUint16(4, true) / 65535) * document.documentElement.scrollHeight
+        } else {
+            x = view.getUint16(2, true)
+            y = view.getUint16(4, true)
+        }
+
+        const curr = getCursorEl(id)
+        curr.style.left = `${x}px`
+        curr.style.top = `${y}px`
+    })
+
+    ws.addEventListener("close", () => {
+        for (const curr of cursors.values()) curr.remove()
+        cursors.clear()
+        clearInterval(ping)
+    })
+
+    function sendPos(x, y) {
+        if (ws.readyState !== WebSocket.OPEN) return
+        if (settings.relative) {
+            x = Math.round((x / document.documentElement.scrollWidth) * 65535)
+            y = Math.round((y / document.documentElement.scrollHeight) * 65535)
+        }
+        const buf = new ArrayBuffer(4)
+        const view = new DataView(buf)
+        view.setUint16(0, x, true)
+        view.setUint16(2, y, true)
+        ws.send(buf)
+    }
+
+    let lastSend = 0
+    document.addEventListener("mousemove", (e) => {
+        const now = performance.now()
+        if (now - lastSend < 22) return
+        lastSend = now
+        sendPos(Math.round(e.pageX), Math.round(e.pageY))
+    })
+
+    const ping = setInterval(() => {
+        if (ws.readyState !== WebSocket.OPEN) return
+        const buf = new ArrayBuffer(1)
+        ws.send(buf)
+    }, 30000);
+})()
+}
+
+/*
+     FILE ARCHIVED ON 00:47:09 Aug 13, 2026 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 05:34:57 Aug 18, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  capture_cache.get: 0.9
+  captures_list: 0.452
+  exclusion.robots: 0.037
+  exclusion.robots.policy: 0.028
+  esindex: 0.008
+  cdx.remote: 8.233
+  LoadShardBlock: 548.906 (3)
+  PetaboxLoader3.datanode: 202.089 (4)
+  PetaboxLoader3.resolve: 76.747 (2)
+  load_resource: 105.946
+*/
+</script>
     {% if home %}{% endif %}
 
   </body>
