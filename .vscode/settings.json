@@ -1,18 +1,17 @@
 {
     "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/.DS_Store": true,
-        "**/Thumbs.db": true,
-        ".github": true,
-        ".vscode": true,
-        "node_modules": true,
-        ".nojekyll": true,
-        "CNAME": true,
-        "package-lock.json": true,
-        "package.json": true,
-        "_site": true
+        "**/.git": false,
+        "**/.svn": false,
+        "**/.hg": false,
+        ".github": false,
+        ".vscode": false,
+        "node_modules": false,
+        ".nojekyll": false,
+        "CNAME": false,
+        "package-lock.json": false,
+        "package.json": false,
+        "_site": false,
+        ".git": false
     },
     "hide-files.files": [
         ".github",
@@ -22,6 +21,7 @@
         "CNAME",
         "package-lock.json",
         "package.json",
-        "_site"
+        "_site",
+        ".git"
     ]
 }

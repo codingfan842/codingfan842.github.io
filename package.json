@@ -3,14 +3,18 @@
   "version": "1.0.0",
   "description": "It's my website :-)",
   "main": "index.js",
+    "type": "commonjs",
+  
   "scripts": {
     "build": "eleventy"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
-    "@11ty/eleventy": "^3.1.6"
+    "@11ty/eleventy": "^3.1.6",
+    "barba": "^1.0.0",
+    "gsap": "^3.15.0",
+    "howler": "^2.2.4"
   }
 }

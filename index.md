@@ -2,48 +2,27 @@
 layout: layout
 title: "Index"
 ---
-
-<div class="w-50 p-4 m0a border-2 border-solid" style="border-top:none;border-bottom:none;">
-    <h1 class="ul">Working on this!</h1>
-    <p>I'm working on <b>DORIAN.MOE</b>, I have some cool ideas.. TBF I just wanted to have something here so my site
-        didn't look sad, so this is it. I think these are the colors I'm going to do BTW (more excuse to fill this up
-        more):</p>
-    <div class="flex flex-row border-2 border-solid border-dark overflow-hidden" style="height:11vh">
-        <div class="bg-red p-4 text-light h-75 w-25"></div>
-        <div class="bg-orange p-4 text-light h-75 w-25"></div>
-        <div class="bg-yellow p-4 text-light h-75 w-25"></div>
-        <div class="bg-green p-4 text-light h-75 w-25"></div>
-        <div class="bg-teal p-4 text-light h-75 w-25"></div>
-        <div class="bg-blue p-4 text-light h-75 w-25"></div>
-        <div class="bg-purple p-4 text-light h-75 w-25"></div>
-        <div class="bg-pink p-4 text-light h-75 w-25"></div>
-        <div class="bg-light p-4 text-light h-75 w-25"></div>
-        <div class="bg-gray p-4 text-light h-75 w-25"></div>
-        <div class="bg-dark p-4 text-light h-75 w-25"></div>
-    </div>
-    <p>Maybe not those exact ones, but a rainbow color palette, I'm kind of undecided. I'm unsure if I like how they
-        look together. More than others, but these are the color variables I have in my CSS, so... IDK! I'm just
-        rambling to fill this page up. </p>
-    <p><i>Anyway</i>, The so-called "DorianVERSE", or the project I plan to host on this domain, is pretty cool, I
-        think. It's a bunch of my characters and they, narratively, "live on my website". There's going to be a game you
-        can play in the browser but it's not done right now.</p>
-    <p>Anyway, some stuff just to fill this up:</p>
-    <ul>
-        <li><b>Fonts used:</b> Overpass, Helvetica</li>
-        <li><b>Made with:</b> 11ty</li>
-        <li><b>Hosted on:</b> GitHub Pages</li>
-        <li><b>Last song I listened to:</b> <span id="widget"><span id="song"></span></span>
-        <li><b>Am I online?:</b> <ws-widget type="online" iid="11608" embed="script"></ws-widget></li>
-        </li>
-        <script
-            type="text/javascript">let user = 'musicfan842'; let url = 'https://lastfm-last-played.biancarosa.com.br/' + user + '/latest-song'; let song = document.querySelector('#song'); fetch(url).then(function (response) { return response.json() }).then(function (json) { song.innerHTML = json['track']['name'] + ' — ' + json['track']['artist']['#text']; });</script>
-    </ul>
-    <sub>I think that the list looks kinda cool</sub>
-    <hr>
-    <blockquote>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore quidem modi sequi temporibus iure nihil itaque
-        deleniti recusandae nam, odit, error inventore sint officiis, eius quae asperiores atque! Error perferendis
-        vitae vero, sint magnam velit itaque incidunt molestiae quo eos nihil nemo, doloremque distinctio obcaecati
-        saepe doloribus hic iste consequatur?
-    </blockquote>
+<div class="absolute  marquee left-0 top-0 text-dark"
+  style="z-index:999;transform:rotate(330deg);left:-110px;top:-150px;border-left:2px solid var(--dark);border-right:2px solid var(--dark)">
+  <div class="bg-red p-3 stripe text-dark  nowrap"
+    style="width:75vw;border-top:2px solid var(--dark);border-bottom:2px solid var(--light)"></div>
+  <div class="bg-orange p-3 stripe text-dark " style="width:75vw;;border-bottom:2px solid var(--light)"></div>
+  <div class="bg-green p-3 stripe text-dark " style="width:75vw;;border-bottom:2px solid var(--light)"></div>
+  <div class="bg-teal p-3 stripe text-dark " style="width:75vw;;border-bottom:2px solid var(--light)"></div>
+  <div class="bg-purple p-3 stripe text-dark "
+    style="width:75vw;;border-bottom:2px solid var(--dark);box-shadow:0px 2px var(--light)"></div>
 </div>
+<div class="bg-light fixed top-0 p-4 left-0" style="width:14%;height:10%;"></div>
+
+<div class="absolute soon-eyes bottom-0 top-0 text-right"
+  style="font-size:90px;right:50px;top:70px;letter-spacing:-10px">
+  <p><b>The DorianVERSE</b> will return</p>
+  <div style="font-size:150px"><span class="text-green asterisk"><span class="text-pink asterisk">✱</span><span
+        class="text-yellow asterisk">✱</span><span class="text-teal asterisk">✱</span>✱</span> SOON</div>
+</div>
+
+<div class="p-2 soon-text absolute border-dark bottom-0 right-0 border-solid border-2 w-25"
+  style="left:50px;bottom:50px">
+  The DorianVERSE is under construction! Please be patient as I work on setting up pages.
+</div>
+

@@ -1,2 +1,5 @@
 node_modules
 _site
+.vscode
+.git
+/src
