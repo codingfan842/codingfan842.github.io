@@ -23,6 +23,7 @@ title: "Index"
 
 <div class="p-2 soon-text absolute border-dark bottom-0 right-0 border-solid border-2 w-25"
   style="left:50px;bottom:50px">
-  The DorianVERSE is under construction! Please be patient as I work on setting up pages.
+  The DorianVERSE is under construction! Please be patient as I work on setting up pages. <div id="drn-button"> <img  src="/assets/resource/image/buttons/drnvrse-btn-1.png" style="image-rendering:pixelated;" alt=""> </div> Click me to copy
+
 </div>
 

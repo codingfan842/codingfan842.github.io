@@ -69,26 +69,17 @@ function initAnimations() {
 
 document.querySelectorAll('.stripe').forEach(element => {
     element.addEventListener('mouseenter', () => {
-        gsap.to(element, {
-            duration: 0.3, height: 20, ease: "bounce.out",
-            onStart() {
-                popSound.play();
-            }
-        }
-        );
-    });
+        gsap.to(element, { duration: 0.3, height: 20, ease: "bounce.out", onStart() { popSound.play(); } } ); });
 
     element.addEventListener('mouseleave', () => {
         gsap.to(element, { duration: 0.3, height: 0, ease: "bounce.out", });
     });
 });
 
-
 initAnimations();
 
 
-
-// Your favicon animation
+/* =============== FAVICON =============== */
 const faviconLink = document.querySelector("link[rel='icon']");
 let frameIndex = 0;
 const frames = [
@@ -104,3 +95,6 @@ setInterval(() => {
   faviconLink.href = frames[frameIndex];
   frameIndex = (frameIndex + 1) % frames.length;
 }, 1000); 
+
+/* =============== COPY BUTTONS =============== */
+document.getElementById("drn-button").addEventListener("click", async () => {try {await navigator.clipboard.writeText("<a href='dorian.moe'><img style='image-rendering:pixelated' src='https://dorian.moe/assets/resource/image/buttons/drnvrse-btn-1.png' alt='button of dorian.moe'></a>");alert("Copied!");} catch (err) {alert("Copy failed");}});
