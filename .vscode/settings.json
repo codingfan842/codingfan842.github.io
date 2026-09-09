@@ -11,7 +11,8 @@
         ".nojekyll": true,
         "CNAME": true,
         "package-lock.json": true,
-        "package.json": true
+        "package.json": true,
+        "_site": true
     },
     "hide-files.files": [
         ".github",
@@ -20,6 +21,7 @@
         ".nojekyll",
         "CNAME",
         "package-lock.json",
-        "package.json"
+        "package.json",
+        "_site"
     ]
 }
