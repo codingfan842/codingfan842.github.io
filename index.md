@@ -33,6 +33,7 @@ title: "Index"
         <li><b>Made with:</b> 11ty</li>
         <li><b>Hosted on:</b> GitHub Pages</li>
         <li><b>Last song I listened to:</b> <span id="widget"><span id="song"></span></span>
+        <li><b>Am I online?:</b> <ws-widget type="online" iid="11608" embed="script"></ws-widget></li>
         </li>
         <script
             type="text/javascript">let user = 'musicfan842'; let url = 'https://lastfm-last-played.biancarosa.com.br/' + user + '/latest-song'; let song = document.querySelector('#song'); fetch(url).then(function (response) { return response.json() }).then(function (json) { song.innerHTML = json['track']['name'] + ' — ' + json['track']['artist']['#text']; });</script>
