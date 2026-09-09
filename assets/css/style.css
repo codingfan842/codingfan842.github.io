@@ -1,0 +1,25 @@
+:root {
+    --red: #fa4a34;
+    --orange: #f59b29;
+    --yellow: #fff068;
+    --green: #cbe711;
+    --teal:#70f0c7;
+    --blue:#4ec7f5;
+    --purple:#ec5cca;
+    --pink:#fa2f9b;
+    --dark :#000F08;
+    --gray:#d1d1d1;
+    --dark-gray:#918e8e;
+
+    --light:#FAFAFA;
+}
+
+
+
+* {
+    font-family: Helvetica!important;
+    background-color: var(--light);
+    color:var(--dark);
+}
+
+
