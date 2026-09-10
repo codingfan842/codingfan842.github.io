@@ -943,7 +943,6 @@
 /* ============================== TAGS TAGS TAGS ============================== */
 /* =============== IMG =============== */
 img {
-  max-width: 100%;
   user-select: none;
   pointer-events: none;
 }
@@ -1047,6 +1046,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
+  background:none;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
