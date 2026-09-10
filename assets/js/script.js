@@ -4,6 +4,9 @@
 const popSound = new Howl({
     src: ['/assets/resource/audio/pop.mp3']
 });
+const successSound = new Howl({
+    src: ['/assets/resource/audio/success.mp3']
+});
 
 
 
@@ -12,14 +15,14 @@ function initAnimations() {
         gsap.from('.stripe', { 
             opacity: 0,
             x: 500,
-            duration: 0.6,
+            duration: 0.9,
             stagger: 0.5,
             ease: "back.out",
         });
 
         gsap.from('.soon-eyes', { 
             opacity: 0,
-            delay: 2.5,
+            delay: 2.9,
             duration: 1,
             x: 5,
             ease: "back.out",
@@ -29,7 +32,7 @@ function initAnimations() {
             ease: "back-out",
             x: 5,
             opacity: 0,
-            delay: 3
+            delay: 3.3
         });
 
 
@@ -97,4 +100,4 @@ setInterval(() => {
 }, 1000); 
 
 /* =============== COPY BUTTONS =============== */
-document.getElementById("drn-button").addEventListener("click", async () => {try {await navigator.clipboard.writeText("<a href='dorian.moe'><img style='image-rendering:pixelated' src='https://dorian.moe/assets/resource/image/buttons/drnvrse-btn-1.png' alt='button of dorian.moe'></a>");alert("Copied!");} catch (err) {alert("Copy failed");}});
+document.getElementById("drn-button").addEventListener("click", async () => {try { successSound.play(); await navigator.clipboard.writeText("<a href='dorian.moe'><img style='image-rendering:pixelated' src='https://dorian.moe/assets/resource/image/buttons/drnvrse-btn-1.png' alt='button of dorian.moe'></a>");alert("Copied!");} catch (err) {alert("Copy failed");}});

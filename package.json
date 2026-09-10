@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "It's my website :-)",
   "main": "index.js",
-    "type": "commonjs",
-  
+  "type": "commonjs",
   "scripts": {
     "build": "eleventy"
   },
@@ -16,5 +15,8 @@
     "barba": "^1.0.0",
     "gsap": "^3.15.0",
     "howler": "^2.2.4"
+  },
+  "devDependencies": {
+    "html-minifier": "^4.0.0"
   }
 }
