@@ -623,7 +623,7 @@
   line-height: 1.75;
 }
 
-.text-shadow-d {
+.tsd {
   text-shadow: 1px 1px var(--dark);
 }
 
@@ -1051,6 +1051,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -1101,9 +1102,9 @@ h3 { font-size: 1.75rem; }
 h4 { font-size: 1.5rem; }
 h5 { font-size: 1.25rem; }
 h6 { font-size: 1rem; }
-h1,h2,h3,h4,h5,h6 {font-weight: thin;margin: 1.5rem 0 0.5rem 0;font-family: "Overpass"!important;}
+h1,h2,h3,h4,h5,h6 {font-weight: thin;margin: 1.5rem 0 0.5rem 0;font-family: "Retro Times"!important;}
 hr { width:auto;margin:10px 0;padding:0;}
-
+small { font-size:70%;color:#5a5a5a}
 p { margin-bottom: 1rem; margin-top:1rem !important;}
 b {font-weight:bolder;}
 i {font-style: italic;}
