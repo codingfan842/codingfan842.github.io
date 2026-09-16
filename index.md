@@ -12,8 +12,8 @@ title: "Index"
       <hr>
       <p>Welcome to my website. 16+. It changes a lot, so be sure to use Ctrl+Shift+R to hard refresh my site if you're a returning visitor. Constant work in progress, always and forever. Responsive but not #1 priority (there will be bugs). Tested on all major browsers. </p>
       <p class="text-center"><u><a href="/home">Enter?++</a></u></p>
-      <div class="m0a flex justify-center text-center w-100">
-              <img class="m0a" src="/assets/resource/image/graphics/underConstructionCat.gif">
+      <div class="m0a flex justify-center text-center w-100 tippy"  title="Under construction!">
+              <img class="m0a tippy" src="/assets/resource/image/graphics/underConstructionCat.gif">
       </div>
     </div>
   </div>
