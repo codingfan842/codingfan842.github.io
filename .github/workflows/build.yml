@@ -25,11 +25,14 @@ jobs:
       - name: Build site
         run: npm run build
 
+      - name: Minify site
+        run: npx minify --input ./_site --output ./_site
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site  
+          publish_dir: ./_site
 
       
       
