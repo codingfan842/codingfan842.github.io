@@ -6,7 +6,8 @@
   "type": "commonjs",
   "scripts": {
     "dev": "npx @11ty/eleventy --serve",
-    "minify": "node scripts/minify.js"
+    "minify": "node scripts/minify.js",
+      "build": "eleventy"
   },
   "keywords": [],
   "author": "",
