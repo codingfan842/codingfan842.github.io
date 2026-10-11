@@ -9,7 +9,7 @@ const siteDir = './_site';
 function walkDir(dir) {
   fs.readdirSync(dir, { withFileTypes: true }).forEach(file => {
     const fullPath = path.join(dir, file.name);
-    
+
     if (file.isDirectory()) {
       walkDir(fullPath);
     } else if (file.isFile()) {
@@ -20,7 +20,7 @@ function walkDir(dir) {
 
 async function processFile(filePath) {
   const ext = path.extname(filePath).toLowerCase();
-  
+
   try {
     if (ext === '.html') {
       const content = fs.readFileSync(filePath, 'utf8');
@@ -34,7 +34,10 @@ async function processFile(filePath) {
       console.log(`${filePath}`);
     } else if (ext === '.css') {
       const content = fs.readFileSync(filePath, 'utf8');
-      const minified = new CleanCSS().minify(content).styles;
+      const minified = new CleanCSS({
+        restructuring: false, 
+        compatibility: '*'     
+      }).minify(content).styles;
       fs.writeFileSync(filePath, minified);
       console.log(`${filePath}`);
     } else if (ext === '.js') {
