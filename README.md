@@ -1,6 +1,1 @@
-![Header with rainbows stripes on the left, the right saying "dorianverse", "a project developed by owlfan842 ("dorian")](https://raw.githubusercontent.com/codingfan842/codingfan842.github.io/refs/heads/main/header_image.png)
-
-✱ The **DorianVERSE** (also can be styled as **dorianverse**, anything goes) is my personal website that will in the future, host all of my *projects*, *artwork*, and *code*. The DorianVERSE is also the name of my worldbuilding project, and the website will also host extensive info about this worldbuilding project.
-Inspired on the Metro design language, but not a 1/1 copy. Speaking of copying, __feel free to take inspiration from my website, but don't copy large chunks of my code.__
-***
-✱ Made with [11ty](https://www.11ty.dev), animations via [https://gsap.com](GSAP), seamless transitions (in the future!) with [https://barba.js.org](barba.js). Thank you!
+dorian.moe
