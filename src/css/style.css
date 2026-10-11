@@ -151,7 +151,7 @@ aside {
   font-weight: 200;
 }
 
-p {
+.tippy-box[data-theme~='nav'] p {
   line-height: 1;
   margin: 0;
   padding: 0;
