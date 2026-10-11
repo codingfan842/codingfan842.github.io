@@ -14,26 +14,29 @@
 }
 
 
-textarea, input {
-    padding: 4px;
-    border: none !important;
-    background-color: var(--light);
-    font-size: 100%;
-    resize: none;
+textarea,
+input {
+  padding: 4px;
+  border: none !important;
+  background-color: var(--light);
+  font-size: 100%;
+  resize: none;
 
 }
 
 
 .entry1 {
-    margin-top:1%;
-    width:100%;
+  margin-top: 1%;
+  width: 100%;
 }
 
 
-textarea:focus, input:focus {
-    outline: 2px solid black;
-    box-shadow: 0 0 0 2px white;
+textarea:focus,
+input:focus {
+  outline: 2px solid black;
+  box-shadow: 0 0 0 2px white;
 }
+
 #utcount {
   width: 100%;
   text-align: center;
@@ -97,8 +100,8 @@ aside {
 
 
 #trackName {
-  width: 250px; 
-  margin-left:0 !important;
+  width: 250px;
+  margin-left: 0 !important;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -139,20 +142,21 @@ aside {
   line-height: 1;
   margin-left: .7em;
   width: 100%;
+}
 
-  b {
-    font-size: 2em;
-    color: var(--light) !important;
-    font-weight: 200;
-  }
 
-  p {
-    line-height: 1;
-    margin: 0;
-    padding: 0;
-    color: var(--light);
-    margin-top: 0 !important;
-  }
+.tippy-box[data-theme~='nav'] b {
+  font-size: 2em;
+  color: var(--light) !important;
+  font-weight: 200;
+}
+
+p {
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  color: var(--light) !important;
+  margin-top: 0 !important;
 }
 
 .tippy-box[data-theme~='nav']:hover body {
@@ -181,45 +185,8 @@ aside {
 /* =========== ANIMATIONS */
 
 
-@keyframes animation {
-  0% {
-    opacity: 0%;
-  }
 
-  100% {
-    opacity: 100%;
-  }
-}
 
-@keyframes fade-out {
-  0% {
-    opacity: 100%
-  }
-
-  100% {
-    opacity: 0%
-  }
-}
-
-@keyframes loadingDots {
-
-  0%,
-  100% {
-    content: '';
-  }
-
-  25% {
-    content: '.';
-  }
-
-  50% {
-    content: '..';
-  }
-
-  75% {
-    content: '...';
-  }
-}
 
 /* == dots for loading */
 
@@ -240,7 +207,7 @@ aside {
   color: var(--light);
   display: flex;
   align-items: center;
-  text-align:center;
+  text-align: center;
   justify-content: center;
 }
 
